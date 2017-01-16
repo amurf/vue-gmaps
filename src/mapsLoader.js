@@ -11,29 +11,29 @@ window[callbackFuncName] = () => loaded();
 
 /*
 load({
-	key: 'api-key',
-	version: '1.2',
-	libraries: ['one', 'two', 'three'],
-	premium:
+    key: 'api-key',
+    version: '1.2',
+    libraries: ['one', 'two', 'three'],
+    premium:
 });
 */
 
 export const load = (args) => {
   if (!inProgress) {
-	inProgress = true; // Only load once.
+    inProgress = true; // Only load once.
 
-	let {key, client, version, libraries} = args;
+    let {key, client, version, libraries} = args;
 
     const googleMapScript = document.createElement('SCRIPT');
 
-	// If premium client-key provided, use it instead of api-key.
+    // If premium client-key provided, use it instead of api-key.
     // https://developers.google.com/maps/documentation/javascript/get-api-key#premium-auth
     let options = {};
-	if (client) {
-		options.client = args.client;
-	} else if (key) {
-		options.key = args.key;
-	}
+    if (client) {
+        options.client = args.client;
+    } else if (key) {
+        options.key = args.key;
+    }
 
 
     // libraries, should be an array.

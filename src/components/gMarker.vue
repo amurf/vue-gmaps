@@ -1,5 +1,5 @@
 <template>
-	<div></div>
+    <div></div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
       };
   },
   mounted: function() {
-	let vm        = this;
+    let vm        = this;
     let parentMap = vm.$parent;
 
     Q.all([loadMaps, parentMap.mapPromise]).then(function() {

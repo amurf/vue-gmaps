@@ -1,5 +1,5 @@
 <template>
-	<div>
+    <div>
         <g-marker :position="position"></g-marker>
     </div>
 </template>
@@ -19,8 +19,8 @@ export default {
         mapObject: "",
         mapDeferred: Q.defer(),
         position: {
-			lat: -34.397,
-			lng: 150.644,
+            lat: -34.397,
+            lng: 150.644,
         },
     }
   },
@@ -30,17 +30,17 @@ export default {
     },
   },
   mounted: function() {
-	let vm = this;
+    let vm = this;
 
     const mapElement = vm.$el;
-	const mapOptions = {
-		center: {
-			lat: -34.397,
-			lng: 150.644,
-		},
-		zoom: 5,
-		disableDefaultUI: false,
-	};
+    const mapOptions = {
+        center: {
+            lat: -34.397,
+            lng: 150.644,
+        },
+        zoom: 5,
+        disableDefaultUI: false,
+    };
 
     loadMaps().then(function() {
         vm.mapObject = new google.maps.Map(mapElement, mapOptions);

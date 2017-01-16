@@ -47,8 +47,8 @@ export default {
 }
 
 .bestMap {
-	height: 300px;
-	width: 300px;
-	display: inline-block;
+    height: 300px;
+    width: 300px;
+    display: inline-block;
 }
 </style>
