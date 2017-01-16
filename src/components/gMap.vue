@@ -45,19 +45,6 @@ export default {
     loadMaps().then(function() {
         vm.mapObject = new google.maps.Map(mapElement, mapOptions);
         vm.mapDeferred.resolve();
-        /*
-		var infowindow = new google.maps.InfoWindow({
-          content: "<h1>I'm a thing</h1><button v-on:click='alertMe'>Click me!</button>",
-        });
-		var marker = new google.maps.Marker({
-          position: { lat: -34.397, lng: 150.644 },
-          map: vm.mapObject,
-          title: 'Hello World!',
-        });
-		marker.addListener('click', function() {
-          infowindow.open(vm.mapObject, marker);
-        });
-        */
     }).catch(function(error) { console.error(error) });
   },
 }
