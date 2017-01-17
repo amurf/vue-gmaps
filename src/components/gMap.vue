@@ -1,18 +1,31 @@
 <template>
     <div>
-        <g-marker :position="position"></g-marker>
+        <!--g-marker :position="position"></g-marker -->
+        <!--g-info-window :position="position" :clickFunc="doClick">
+            <h1>Hello there</h1>
+            <p>How are you clicking on my marker?!</p>
+            <button @click='doClick'>Click me</button>
+        </g-info-window-->
+        <slot></slot>
     </div>
 </template>
 
 <script>
 import Q from 'q';
 import gMarker from './gMarker.vue';
+import gInfoWindow from './gInfoWindow.vue';
 import {loadMaps} from '../mapsConfig.js';
 
 export default {
   name: 'gMap',
   components: {
     gMarker,
+    gInfoWindow,
+  },
+  methods: {
+    doClick: function() {
+       alert("Hello.");
+    },
   },
   data: function() {
     return {
